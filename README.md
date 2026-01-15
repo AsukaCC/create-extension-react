@@ -9,6 +9,7 @@
 - 🔥 开发模式支持热重载（文件变化自动重建）
 - 📦 TypeScript 支持
 - 🎨 现代化 UI 模板
+- 🧭 支持 New Tab / History / Bookmarks 页面
 - 🛠️ 完全可自定义的构建配置
 
 ## 项目结构
@@ -30,6 +31,20 @@
 ```
 
 ## 快速开始
+
+### 使用脚手架创建项目
+
+```bash
+npx create-extension-react my-extension
+```
+
+安装时会提示选择 `newtab` / `history` / `bookmarks` 三选一，并只生成对应模板。
+
+也可以通过参数直接指定类型：
+
+```bash
+npx create-extension-react my-extension --type newtab
+```
 
 ### 安装依赖
 
@@ -88,6 +103,22 @@ npm run build
 - **修改构建配置**：编辑 `vite.config.ts`
 - **添加新页面**：在 `src` 目录创建文件，然后在 `vite.config.ts` 的 `rollupOptions.input` 中添加入口点
 - **修改开发脚本**：编辑 `scripts/dev.js`
+
+### 页面覆盖
+
+项目内置了 3 个可用页面：
+
+- `newtab`：新标签页
+- `history`：历史记录页
+- `bookmarks`：书签页
+
+对应入口文件：
+
+- `src/newtab.html` → `src/newtab/index.tsx`
+- `src/history.html` → `src/history/index.tsx`
+- `src/bookmarks.html` → `src/bookmarks/index.tsx`
+
+如果只需要其中某一类页面，请在 `src/manifest.json` 的 `chrome_url_overrides` 中保留对应条目，并同步删除 `vite.config.ts` 的 `rollupOptions.input` 入口。
 
 ### 使用 Chrome API
 

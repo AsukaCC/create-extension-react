@@ -24,6 +24,8 @@ export default defineConfig(({ mode }) => {
         input: {
           popup: resolve(__dirname, 'src/popup.html'),
           newtab: resolve(__dirname, 'src/newtab.html'),
+          history: resolve(__dirname, 'src/history.html'),
+          bookmarks: resolve(__dirname, 'src/bookmarks.html'),
           background: resolve(__dirname, 'src/background.ts'),
           content: resolve(__dirname, 'src/content.ts'),
         },

@@ -8,7 +8,9 @@
     "default_title": "React Extension"
   },
   "chrome_url_overrides": {
-    "newtab": "newtab.html"
+    "newtab": "newtab.html",
+    "history": "history.html",
+    "bookmarks": "bookmarks.html"
   },
   "background": {
     "service_worker": "background.js"
@@ -19,6 +21,6 @@
       "js": ["content.js"]
     }
   ],
-  "permissions": ["activeTab", "storage"],
+  "permissions": ["activeTab", "storage", "history", "bookmarks"],
   "host_permissions": ["<all_urls>"]
 }

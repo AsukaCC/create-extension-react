@@ -1,8 +1,36 @@
 {
   "name": "create-extension-react",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "author": "Jiangcheng <plutavian@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/AsukaCC/create-extension-react",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AsukaCC/create-extension-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AsukaCC/create-extension-react/issues"
+  },
   "type": "module",
   "description": "Chrome Extension scaffold with React and Vite",
+  "keywords": [
+    "create-extension-react",
+    "chrome",
+    "chrome extension"
+  ],
+  "files": [
+    "scripts/",
+    "src/",
+    "vite-plugin-fix-extension.ts",
+    "vite.config.ts",
+    "tsconfig.json",
+    "tsconfig.node.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "create-extension-react": "scripts/create.js"
+  },
   "scripts": {
     "dev": "node scripts/dev.js",
     "build": "vite build"

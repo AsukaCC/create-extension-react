@@ -54,14 +54,54 @@ body.newtab {
   transition: background 0.2s ease, color 0.2s ease;
 }
 
+/* History 特定全局样式 */
+body.history {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Bookmarks 特定全局样式 */
+body.bookmarks {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
 /* 亮色主题背景渐变 */
 html[data-theme='light'] body.newtab {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: var(--text-primary, #333333);
 }
 
+/* 亮色主题背景渐变 */
+html[data-theme='light'] body.history {
+  background: linear-gradient(135deg, #6b8dd6 0%, #8e37d7 100%);
+  color: var(--text-primary, #333333);
+}
+
+/* 亮色主题背景渐变 */
+html[data-theme='light'] body.bookmarks {
+  background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+  color: var(--text-primary, #333333);
+}
+
 /* 暗色主题背景渐变 */
 html[data-theme='dark'] body.newtab {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: var(--text-primary, #ffffff);
+}
+
+/* 暗色主题背景渐变 */
+html[data-theme='dark'] body.history {
+  background: linear-gradient(135deg, #121827 0%, #1f2a44 100%);
+  color: var(--text-primary, #ffffff);
+}
+
+/* 暗色主题背景渐变 */
+html[data-theme='dark'] body.bookmarks {
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 100%);
   color: var(--text-primary, #ffffff);
 }
